@@ -1,0 +1,22 @@
+<div class="card text-white bg-secondary mb-3">
+  <div class="card-header">{{header}}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Placa</th>
+          <th>Tipo de Vehículo</th>
+          <th>Cilindraje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehicle of vehicles | async">
+          <td>{{vehicle.licensePlate}}</td>
+          <td>{{vehicle.vehicleType}}</td>
+          <td>{{vehicle.cylinderCapacity}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
