@@ -1,0 +1,26 @@
+<div class="card bg-light mb-3">
+  <div class="card-header">{{header}}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Fecha de Ingreso</th>
+          <th>Fecha de Salida</th>
+          <th>Placa</th>
+          <th>Pagado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of tickets | async">
+          <td>{{ticket.id}}</td>
+          <td>{{ticket.entryDate}}</td>
+          <td>{{ticket.exitDate}}</td>
+          <td>{{ticket.vehicle.licensePlate}}</td>
+          <td>{{ticket.paid}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
