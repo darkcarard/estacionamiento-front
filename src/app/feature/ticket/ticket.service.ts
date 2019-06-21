@@ -8,7 +8,7 @@ import { Ticket } from 'src/app/shared/model/ticket';
 })
 export class TicketService {
 
-  private baseUrl: string = 'http://localhost:8762/estacionamiento/tickets';
+  private baseUrl: string = 'http://localhost:8085/estacionamiento/tickets';
   constructor(private http: HttpClient) { }
 
   getTickets(): Observable<Ticket[]> {
